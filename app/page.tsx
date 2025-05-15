@@ -1,11 +1,9 @@
 'use client';
 import React from 'react';
-import { FaInstagram, FaTiktok, FaFacebook, FaTwitter } from 'react-icons/fa6';
 import BgPic from '../assets/b30e39bbdc1421155a299a1f93dadcfe312a50e8.jpg';
 import pic1 from '../assets/4d745afd6031e32a0fb52bccb231ed274e8d353e.png';
 import pic2 from '../assets/cc48bd6d8718ec1d3490cee776e0c677e5825dbe.png';
 import Image from 'next/image';
-import Link from 'next/link';
 
 const Index = () => {
   return (

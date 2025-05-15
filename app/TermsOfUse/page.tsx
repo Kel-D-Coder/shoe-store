@@ -1,6 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
-import { FaInstagram, FaFacebook, FaTwitter } from 'react-icons/fa6';
 
 const TermsOfUse = () => {
   return (
@@ -19,16 +17,16 @@ const TermsOfUse = () => {
           <div className="mb-8">
             <h2 className="text-sm font-medium mb-2">General Terms and Conditions of Use for LittleThingsforHer.com</h2>
             <p className="text-sm leading-relaxed">
-              Welcome to "Little Things for Her" (LTFH). By using our website, you agree to comply with 
+              Welcome to &quot;Little Things for Her&quot; (LTFH). By using our website, you agree to comply with 
               these Terms and Conditions. Please read them carefully, as they govern your access to 
               and use of our Site, as well as any services, products, and content provided therein.
             </p>
           </div>
           
           <div className="mb-8">
-            <h2 className="text-sm font-medium mb-2">1. Personal Data & Privacy Policy</h2>
+            <h2 className="text-sm font-medium mb-2">1. Personal Data &amp; Privacy Policy</h2>
             <p className="text-sm leading-relaxed">
-              We have a separate Privacy Policy ("Privacy Policy") that describes how we collect, use, and 
+              We have a separate Privacy Policy (&quot;Privacy Policy&quot;) that describes how we collect, use, and 
               protect your personal information. By using this Site, you consent to the collection and 
               processing of your information as outlined in our Privacy Policy.
             </p>
@@ -57,7 +55,7 @@ const TermsOfUse = () => {
             <h2 className="text-sm font-medium mb-2">4. User Conduct</h2>
             <p className="text-sm leading-relaxed">
               You agree not to use the Site in any way that may disrupt, damage, or interfere with other 
-              users' experience. This includes but is not limited to transmitting harmful, offensive, or 
+              users&apos; experience. This includes but is not limited to transmitting harmful, offensive, or 
               otherwise inappropriate content.
             </p>
           </div>
@@ -75,12 +73,12 @@ const TermsOfUse = () => {
           <div className="mb-8">
             <h2 className="text-sm font-medium mb-2">6. Disclaimer of Warranty</h2>
             <p className="text-sm leading-relaxed">
-                The Site and all content are provided “as is” and “as available” without warranties of any kind, either express or implied, including but not limited to the implied warranties of merchantability and fitness for a particular purpose. LTFH does not warrant that the Site will be uninterrupted, secure, or error-free
+                The Site and all content are provided &quot;as is&quot; and &quot;as available&quot; without warranties of any kind, either express or implied, including but not limited to the implied warranties of merchantability and fitness for a particular purpose. LTFH does not warrant that the Site will be uninterrupted, secure, or error-free
             </p>
           </div>
           
           <div className="mb-8">
-            <h2 className="text-sm font-medium mb-2">7. Governing Law & Dispute Resolution</h2>
+            <h2 className="text-sm font-medium mb-2">7. Governing Law &amp; Dispute Resolution</h2>
             <p className="text-sm leading-relaxed">
             These Terms and Conditions are governed by Nigerian law. Any disputes related to these Terms or the Site will be resolved exclusively in the courts of Nigeria
             </p>
