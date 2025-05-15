@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { FaChevronDown, FaChevronUp, FaPhone } from "react-icons/fa6";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
+import { JSX } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -12,6 +13,11 @@ import Image from "next/image";
 import Pic1 from "../../assets/940d77c737e65e1666229eaadb10bf94290769d1.jpg";
 import Pic2 from "../../assets/3b486a6a037a228408d0100b08a5930c53377346.jpg";
 import Pic3 from "../../assets/a86c1d678106450bd9b40d076f9625dc37b488ea.jpg";
+
+type Section = {
+    title: string;
+    content: JSX.Element;
+  };
 
 const ProductPage: React.FC = () => {
   const [showModal, setShowModal] = useState(false);
@@ -124,8 +130,9 @@ const ProductPage: React.FC = () => {
             </div>
           )}
 
+          {/* Define a type for the sections */}
           {["details", "care", "shipping"].map((key) => {
-            const sections: Record<string, any> = {
+            const sections: Record<string, Section> = {
               details: {
                 title: "Details",
                 content: (
