@@ -20,12 +20,6 @@ const AboutSection = () => {
           </h3>
         </div>
 
-        {/* Blue underline (desktop only) */}
-        <div
-          className="hidden md:block w-full border-b-2"
-          style={{ borderColor: "#32A9E1" }}
-        ></div>
-
         {/* Description */}
         <div className="max-w-3xl mx-auto md:mx-0 mt-8 md:mt-2 md:-mb-2">
           <p className="text-sm md:text-base leading-relaxed font-light md:font-normal text-left">

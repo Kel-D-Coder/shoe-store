@@ -6,7 +6,7 @@ const Page = () => {
   
             {/* Hero */}
             <section className="text-center py-24">
-            <h1 className="text-[72px] leading-none font-[500] tracking-wide font-serif">CONTACT US</h1>
+            <h1 className="text-[52px] md:text-[72px] leading-none font-[500] tracking-wide font-serif">CONTACT US</h1>
             </section>
     
             {/* Contact Info */}
@@ -19,16 +19,14 @@ const Page = () => {
             <div className="text-sm space-y-4">
                 <div>
                 <p className="font-bold tracking-widest">Customer Service</p>
-                <p>Call: +234 814 307 7480</p>
+                <p>Call: +234 814 307 7490</p>
                 </div>
                 <div>
                 <p>Opening/Closing hours</p>
-                <p>Monday to Friday: 9am – 5pm (GMT+0)</p>
-                <p>Saturday: 10am – 2pm (GMT+1)</p>
+                <p>Monday to Friday: 9am – 5pm (GMT+1)</p>
+                <p>Saturday: 10am – 9pm (GMT+1)...</p>
                 </div>
                 <div>
-                <p>Have a question? You can also contact us:</p>
-                <p className="text-blue-700">Service@littlethingsforher.com</p>
                 </div>
             </div>
             </section>
