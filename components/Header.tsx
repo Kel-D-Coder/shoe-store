@@ -6,12 +6,18 @@ import emailjs from "@emailjs/browser";
 import "animate.css";
 import Image from "next/image";
 import logo from "../assets/Logotype on Banner.png";
+import { Bars2Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const Header = () => {
   const [isPanelOpen, setIsPanelOpen] = useState(false);
   const [isSending, setIsSending] = useState(false);
   const [message, setMessage] = useState("");
   const formRef = useRef<HTMLFormElement>(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
 
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
@@ -43,7 +49,28 @@ const Header = () => {
   return (
     <div className="bg-white">
       <header className="flex justify-between items-center py-4 px-6 bg-white text-black relative z-50 font-medium" style={{ fontFamily: "BLmelody" }}>
-        <div className="flex space-x-6">
+        {/* Mobile Menu Icon & Logo (left) */}
+        <div className="md:hidden flex items-center gap-3">
+          <button onClick={toggleMobileMenu} className="text-gray-700 hover:text-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+            {isMobileMenuOpen ? (
+              <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+            ) : (
+              <Bars2Icon className="h-6 w-6" aria-hidden="true" />
+            )}
+          </button>
+          <Link href="/">
+            <Image
+              src={logo}
+              alt="LTFH Logo"
+              width={100}
+              height={30}
+              className="w-20 h-auto object-contain"
+            />
+          </Link>
+        </div>
+
+        {/* Navigation Links (Hidden on Mobile) */}
+        <div className="hidden md:flex space-x-6">
           <Link
             href="/about"
             className="text-xs font-medium text-gray-700 hover:text-black"
@@ -58,31 +85,55 @@ const Header = () => {
           </Link>
         </div>
 
-        <div className="absolute left-1/2 transform -translate-x-1/2 text-sm font-medium">
+        {/* Desktop Logo (centered) */}
+        <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 text-sm font-medium">
           <Link href="/">
-            <Image 
-                src={logo} // Change this to your actual logo file path
-                alt="LTFH Logo"
-                width={100}
-                height={30}
-                className="w-20 h-auto object-contain"
-             />
+            <Image
+              src={logo}
+              alt="LTFH Logo"
+              width={100}
+              height={30}
+              className="w-20 h-auto object-contain"
+            />
           </Link>
         </div>
 
         <button
           onClick={() => setIsPanelOpen(true)}
-          className="text-xs font-medium text-gray-700 hover:text-black"
+          className="text-xs font-medium text-gray-700 hover:text-black md:block"
         >
           CONTACT US
         </button>
       </header>
+
+      {/* Mobile Navigation Menu */}
 
       {/* Double underline under header */}
       <div className="w-full">
         <div className="h-[1.5px] bg-[#cfaab8]"></div>
         <div className="h-[1.5px] bg-[#cfaab8] mt-1"></div>
       </div>
+      {isMobileMenuOpen && (
+        <div className="md:hidden top-10 left-0 right-0 bg-white shadow-md z-10">
+          {/* Nav links */}
+          <div className="flex flex-row px-6 py-4 gap-6">
+            <Link
+              href="/about"
+              className="text-base font-bold text-black"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              ABOUT LTFH
+            </Link>
+            <Link
+              href="/shop"
+              className="text-base font-bold text-black"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              SHOP
+            </Link>
+          </div>
+        </div>
+      )}
 
       {isPanelOpen && (
         <>
