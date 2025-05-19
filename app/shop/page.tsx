@@ -105,28 +105,42 @@ const ProductPage: React.FC = () => {
           </button>
 
           {showModal && (
-            <div className="fixed top-6 right-6 z-50 bg-white rounded-md p-6 max-w-sm w-full shadow-lg border border-gray-200">
-              <button
+            <div className="fixed inset-0 z-50 flex">
+              {/* Overlay */}
+              <div
+                className="flex-1 bg-black/10"
                 onClick={() => setShowModal(false)}
-                className="absolute top-3 right-4 text-sm font-medium text-black hover:underline"
-              >
-                Close
-              </button>
-              <h2 className="text-lg font-semibold mb-2 text-center" style={{ fontFamily: 'Belgan Aesthetic' }}>
-                ORDER BY PHONE
-              </h2>
-              <p className="text-sm text-gray-600 mb-1 text-center">
-                Our personal advisors are delighted to assist you Monday to Friday from 9am to 7pm and Saturday from 9am to 5pm (WAT).
-              </p>
-              <p className="text-xs text-gray-500 mb-4 text-center">(Closed on public holidays)</p>
-              <div className="flex items-center justify-center gap-2 text-gray-500 text-base font-medium mb-4">
-                <FaPhone />
-                <span>CALL US: +234 201 330 6336</span>
+                aria-label="Close modal"
+              />
+              {/* Sliding Panel */}
+              <div className="relative w-full max-w-md h-full bg-white shadow-lg border-l border-gray-200 animate__animated animate__slideInRight flex flex-col px-6 py-8">
+                <button
+                  onClick={() => setShowModal(false)}
+                  className="absolute top-5 right-6 text-base font-medium text-black hover:underline hover:cursor-pointer"
+                  aria-label="Close"
+                >
+                  Close
+                </button>
+                <div className="flex flex-col items-center mt-2">
+                  <h2 className="text-xl font-semibold mb-6 text-center tracking-tight">
+                    ORDER BY PHONE
+                  </h2>
+                  <p className="text-base text-black mb-2 text-center leading-relaxed max-w-xs">
+                    Our personal advisors are delighted to assist you with the purchase of your piece Monday to Friday from 9 am to 7 pm and Saturday from 9 am to 5 pm (West Africa Time).
+                  </p>
+                  <p className="text-sm text-gray-500 mb-8 text-center">
+                    (Closed on public holiday).
+                  </p>
+                  <div className="flex items-center justify-center gap-3 text-gray-400 text-lg font-medium mb-24 mt-2">
+                    <FaPhone className="h-6 w-6" />
+                    <span className="tracking-wide">CALL US: +234 201 330 6336</span>
+                  </div>
+                  <ul className="text-black text-base list-disc pl-6 space-y-2 w-full max-w-xs mx-auto text-left">
+                    <li>Purchase a piece online with the help of our personal advisors</li>
+                    <li>Discover more piece with personalized consultations</li>
+                  </ul>
+                </div>
               </div>
-              <ul className="text-left text-sm text-gray-700 list-disc pl-5 space-y-2">
-                <li>Purchase a piece online with the help of our personal advisors</li>
-                <li>Discover more pieces with personalized consultations</li>
-              </ul>
             </div>
           )}
 

@@ -156,73 +156,122 @@ const Header = () => {
             </div>
 
             <div className="p-6 text-black">
-              <h1 className="text-2xl font-semibold mb-2">REQUEST SHEET</h1>
-              <p className="text-sm text-gray-600 mb-6">
-                Explore our curated collection through our exclusive physical
-                catalogue. Submit your details, and we’ll arrange delivery.
-              </p>
-
-              <p className="text-xs mb-4">
-                All fields required<span className="text-red-500">*</span>
+              <h1 className="text-2xl font-semibold mb-4 text-center">REQUEST SHEET</h1>
+              <p className="text-sm text-gray-600 mb-10 text-center max-w-xs mx-auto">
+                Explore our curated collection through our exclusive physical catalogue. Submit your details, and we’ll arrange delivery.
               </p>
 
               <form
                 ref={formRef}
                 onSubmit={sendEmail}
-                className="space-y-4 text-sm text-black"
+                className="space-y-7 text-sm text-black mt-2"
               >
-                <div className="grid grid-cols-2 gap-4">
+                {/* All fields required */}
+                <p className="text-[15px] mb-4 font-normal text-black">
+                  All fields required<span className="text-red-500">*</span>
+                </p>
+
+                {/* Civility and Full Name */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="flex flex-col">
+                    <label className="mb-1 text-[15px] font-normal text-black" htmlFor="civility">
+                      Civility*
+                    </label>
+                    <input
+                      id="civility"
+                      name="civility"
+                      placeholder="Mr/Mrs/Miss"
+                      required
+                      className="border border-gray-300 px-3 py-2 w-full bg-white text-black placeholder-gray-400"
+                    />
+                  </div>
+                  <div className="flex flex-col">
+                    <label className="mb-1 text-[15px] font-normal text-black" htmlFor="full_name">
+                      Full name*
+                    </label>
+                    <input
+                      id="full_name"
+                      name="full_name"
+                      placeholder="Full Name"
+                      required
+                      className="border border-gray-300 px-3 py-2 w-full bg-white text-black placeholder-gray-400"
+                    />
+                  </div>
+                </div>
+
+                {/* Phone */}
+                <div className="flex flex-col mt-2">
+                  <label className="mb-1 text-[15px] font-normal text-black" htmlFor="phone">
+                    Phone number*
+                  </label>
                   <input
-                    name="civility"
-                    placeholder="Mr/Mrs/Miss"
+                    id="phone"
+                    name="phone"
+                    placeholder="Phone number"
                     required
-                    className="border px-3 py-2 w-full"
-                  />
-                  <input
-                    name="full_name"
-                    placeholder="Full Name*"
-                    required
-                    className="border px-3 py-2 w-full"
+                    className="border border-gray-300 px-3 py-2 w-full bg-white text-black placeholder-gray-400"
                   />
                 </div>
 
-                <input
-                  name="phone"
-                  placeholder="Phone number*"
-                  required
-                  className="border px-3 py-2 w-full"
-                />
-                <input
-                  name="email"
-                  type="email"
-                  placeholder="Email address*"
-                  required
-                  className="border px-3 py-2 w-full"
-                />
-                <input
-                  name="address"
-                  placeholder="Find your address"
-                  required
-                  className="border px-3 py-2 w-full"
-                />
-
-                <div className="grid grid-cols-2 gap-4">
+                {/* Email */}
+                <div className="flex flex-col mt-2">
+                  <label className="mb-1 text-[15px] font-normal text-black" htmlFor="email">
+                    Email address*
+                  </label>
                   <input
-                    name="state"
-                    placeholder="Add state"
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="Enter your address"
                     required
-                    className="border px-3 py-2 w-full"
+                    className="border border-gray-300 px-3 py-2 w-full bg-white text-black placeholder-gray-400"
                   />
-                  <select
-                    name="country"
+                </div>
+
+                {/* Address */}
+                <div className="flex flex-col mt-2">
+                  <label className="mb-1 text-[15px] font-normal text-black" htmlFor="address">
+                    Address *
+                  </label>
+                  <input
+                    id="address"
+                    name="address"
+                    placeholder="Find your address"
                     required
-                    className="border px-3 py-2 w-full"
-                  >
-                    <option value="">Choose country</option>
-                    <option value="Nigeria">Nigeria</option>
-                    <option value="Ghana">Ghana</option>
-                    <option value="United States">United States</option>
-                  </select>
+                    className="border border-gray-300 px-3 py-2 w-full bg-white text-black placeholder-gray-400"
+                  />
+                </div>
+
+                {/* State and Country */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="flex flex-col">
+                    <label className="mb-1 text-[15px] font-normal text-black" htmlFor="state">
+                      State*
+                    </label>
+                    <input
+                      id="state"
+                      name="state"
+                      placeholder="Add state"
+                      required
+                      className="border border-gray-300 px-3 py-2 w-full bg-white text-black placeholder-gray-400"
+                    />
+                  </div>
+                  <div className="flex flex-col">
+                    <label className="mb-1 text-[15px] font-normal text-black" htmlFor="country">
+                      Country*
+                    </label>
+                    <select
+                      id="country"
+                      name="country"
+                      required
+                      className="border border-gray-300 px-3 py-2 w-full bg-white text-black"
+                    >
+                      <option value="">Choose country</option>
+                      <option value="Nigeria">Nigeria</option>
+                      <option value="Ghana">Ghana</option>
+                      <option value="United States">United States</option>
+                    </select>
+                  </div>
                 </div>
 
                 <button
