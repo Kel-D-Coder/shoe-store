@@ -4,7 +4,7 @@ import React from 'react';
 const TermsOfUse = () => {
   return (
     <PatternLayout>
-    <div className="flex flex-col min-h-screen bg-white relative sm:h-[420vh] h-[530vh]" style={{ background: `linear-gradient(to bottom, #fefffa 10%, white 20%)`, fontFamily: "BLmelody" }}>
+    <div className="flex flex-col min-h-screen bg-white relative sm:h-[420vh] mb-[10vh]" style={{ background: `linear-gradient(to bottom, #fefffa 10%, white 20%)`, fontFamily: "BLmelody" }}>
 
       {/* Main Content */}
       <main className="flex-grow flex flex-col relative z-10">
