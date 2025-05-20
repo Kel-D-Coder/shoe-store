@@ -8,7 +8,6 @@ import textLogo from '../assets/Logotype on Banner.png'
 import logo from '../assets/Logo at footer and home.png'
 import emblem from "../assets/LTFH Emblem on Homescreen.png"
 import { useRouter } from 'next/navigation';
-import pattern from '../assets/Pattern_Mobile_and_Desktop-removebg-preview.png';
 import PatternLayout from '@/components/PatternLayout';
 import "./home.css";
 
