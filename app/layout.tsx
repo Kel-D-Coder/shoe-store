@@ -3,6 +3,8 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import 'animate.css';
+import pattern from "../assets/Pattern_Mobile_and_Desktop-removebg-preview.png";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,9 +21,11 @@ export default function RootLayout({
       <body
         // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         style={{ fontFamily: 'Belgan Aesthetic' }}
+        className="flex flex-col"
       >
         <Header />
         {children}
+        {/* <Image src={pattern} alt="" className="place-self-end absolute" /> */}
         <Footer />
       </body>
     </html>

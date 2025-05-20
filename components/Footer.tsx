@@ -2,9 +2,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaInstagram, FaTiktok, FaXTwitter } from "react-icons/fa6";
 import logo from "../assets/Logo Mobile.png"
+import pattern from "../assets/Pattern_Mobile_and_Desktop-removebg-preview.png";
 
 const Footer = () => {
   return (
+    <div className="flex flex-col">
+      
+      {/* <Image src={pattern} alt="" className="place-self-end" /> */}
+    
     <footer className="bg-black text-white font-['BL Melody'] text-sm ">
       <div className="max-w-7xl mx-auto px-6 py-12">
         {/* Top Section */}
@@ -82,7 +87,8 @@ const Footer = () => {
           <span className="text-xs tracking-wide">Little Things for Her</span>
         </div>
       </div>
-    </footer>
+      </footer>
+      </div>
   );
 };
 

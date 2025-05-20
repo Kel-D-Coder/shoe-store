@@ -48,7 +48,7 @@ const Header = () => {
 
   return (
     <div className="bg-white">
-      <header className="flex justify-between items-center py-4 px-6 bg-white text-black relative z-50 font-medium" style={{ fontFamily: "BLmelody" }}>
+      <header className="flex justify-between items-center py-4 px-6 bg-white text-black relative z-50" style={{ fontFamily: "BLmelody-light" }}>
         {/* Mobile Menu Icon & Logo (left) */}
         <div className="md:hidden flex items-center gap-3">
           <button onClick={toggleMobileMenu} className="text-gray-700 hover:text-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -91,9 +91,8 @@ const Header = () => {
             <Image
               src={logo}
               alt="LTFH Logo"
-              width={100}
-              height={30}
-              className="w-20 h-auto object-contain"
+             
+              className="w-32 h-auto object-contain"
             />
           </Link>
         </div>
@@ -110,8 +109,8 @@ const Header = () => {
 
       {/* Double underline under header */}
       <div className="w-full">
-        <div className="h-[1.5px] bg-[#cfaab8]"></div>
-        <div className="h-[1.5px] bg-[#cfaab8] mt-1"></div>
+        <div className="h-[1.5px] bg-[#ba4471]"></div>
+        <div className="h-[1.5px] bg-[#ba4471] mt-1"></div>
       </div>
       {isMobileMenuOpen && (
         <div className="md:hidden top-10 left-0 right-0 bg-white shadow-md z-10">

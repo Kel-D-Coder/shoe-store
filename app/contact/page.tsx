@@ -2,7 +2,9 @@
 
 const Page = () => {
     return (
-        <main className="bg-[#FAFAF5] text-black">
+        <main className="bg-[#FAFAF5] text-black" style={{
+    background: `linear-gradient(to bottom, #fefffa 30%, white 40%)`,
+  }}>
   
             {/* Hero */}
             <section className="text-center py-24">
@@ -10,7 +12,7 @@ const Page = () => {
             </section>
     
             {/* Contact Info */}
-            <section className="max-w-3xl mx-auto px-6 pb-24">
+            <section className="max-w-3xl mx-auto px-6 pb-24" style={{fontFamily: "BLmelody"}}>
             <h2 className="uppercase text-sm font-bold tracking-widest mb-2">Get in Touch</h2>
             <p className="text-gray-700 mb-6">
                 For inquiries, assistance, or to request a catalogue, <br /> reach out—we’re here for you.
@@ -19,7 +21,7 @@ const Page = () => {
             <div className="text-sm space-y-4">
                 <div>
                 <p className="font-bold tracking-widest">Customer Service</p>
-                <p>Call: +234 814 307 7490</p>
+                <p>Call: +234 201 330 6336</p>
                 </div>
                 <div>
                 <p>Opening/Closing hours</p>

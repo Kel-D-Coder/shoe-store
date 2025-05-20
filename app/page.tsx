@@ -8,16 +8,23 @@ import textLogo from '../assets/Logotype on Banner.png'
 import logo from '../assets/Logo at footer and home.png'
 import emblem from "../assets/LTFH Emblem on Homescreen.png"
 import { useRouter } from 'next/navigation';
+import pattern from '../assets/Pattern_Mobile_and_Desktop-removebg-preview.png';
+import PatternLayout from '@/components/PatternLayout';
+import "./home.css";
 
 const Index = () => {
   const router = useRouter();
   return (
-    <div className="relative flex flex-col min-h-screen bg-white">
+    <PatternLayout>
+    <div className="relative flex flex-col h-[150vh] bg-white ">
+      {/* <Image src={pattern} alt="" className="place-self-end absolute" /> */}
       {/* Background Image */}
       <div
-        className="absolute inset-0 bg-no-repeat bg-center bg-cover opacity-20 z-0"
-        style={{ backgroundImage: `url(${BgPic.src})` }}
-      ></div>
+        className="absolute inset-0 z-20 bg-no-repeat bg-center bg-cover opacity-20 h-full hero"
+        // style={{ backgroundImage: `url(${BgPic.src})` }}
+        >
+        <Image src={BgPic} alt="Background" fill className="object-cover" />
+      </div>
 
       {/* Main Content */}
       <main className="flex-grow relative z-10 px-4 sm:px-6 lg:px-8 py-10">
@@ -50,7 +57,7 @@ const Index = () => {
 
           <div className="text-center mt-4">
             <button className='hover:cursor-pointer' onClick={() => router.push('/shop')}>
-            <p className="text-sm sm:text-base font-medium border p-2 rounded hover:underline text-black" style={{fontFamily: "BLmelody"}}>Unravel Elegance</p>
+            <p className="text-sm sm:text-base font-medium border p-2 hover:underline text-black" style={{fontFamily: "BLmelody"}}>unveil elegance</p>
 
             </button>
           </div>
@@ -61,7 +68,8 @@ const Index = () => {
       </main>
 
      
-    </div>
+      </div>
+      </PatternLayout>
   );
 };
 

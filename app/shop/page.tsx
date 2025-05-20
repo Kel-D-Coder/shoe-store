@@ -14,6 +14,11 @@ import Pic1 from "../../assets/940d77c737e65e1666229eaadb10bf94290769d1.jpg";
 import Pic2 from "../../assets/3b486a6a037a228408d0100b08a5930c53377346.jpg";
 import Pic3 from "../../assets/a86c1d678106450bd9b40d076f9625dc37b488ea.jpg";
 
+import LeftArrow from "../../assets/Backward-mobile.png";
+import RightArrow from "../../assets/Forward-Mobile.png";
+import PatternLayout from "@/components/PatternLayout";
+
+
 type Section = {
     title: string;
     content: JSX.Element;
@@ -27,6 +32,10 @@ const ProductPage: React.FC = () => {
     care: false,
     shipping: false,
   });
+
+  const prevRef = React.useRef<HTMLButtonElement | null>(null);
+  const nextRef = React.useRef<HTMLButtonElement | null>(null);
+
 
   const images = [Pic1, Pic2, Pic3];
 
@@ -47,28 +56,59 @@ const ProductPage: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-white">
+    <PatternLayout>
+    <div className="flex flex-col h-[200vh] sm:h-[150vh] bg-white">
       <main className="flex-grow grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-8 py-6 max-w-7xl mx-auto w-full">
         <div className="flex">
           {isMobile ? (
-            <Swiper
-              modules={[Navigation, Pagination]}
-              spaceBetween={10}
-              slidesPerView={1}
-              navigation
-              pagination={{ clickable: true }}
-              className="w-full"
-            >
-              {images.map((img, idx) => (
-                <SwiperSlide key={idx}>
-                  <Image
-                    src={img}
-                    alt={`Tatam Sandal slide ${idx + 1}`}
-                    className="w-full h-auto object-contain"
-                  />
-                </SwiperSlide>
-              ))}
-            </Swiper>
+           <Swiper
+            modules={[Navigation, Pagination]}
+            spaceBetween={10}
+            slidesPerView={1}
+            pagination={{ clickable: true }}
+            navigation={{
+              prevEl: prevRef.current,
+              nextEl: nextRef.current,
+            }}
+  onBeforeInit={(swiper) => {
+    if (swiper.params.navigation) {
+      if (typeof swiper.params.navigation !== "boolean") {
+        swiper.params.navigation.prevEl = prevRef.current;
+        swiper.params.navigation.nextEl = nextRef.current;
+      }
+    }
+  }}
+  className="w-full relative"
+>
+  {images.map((img, idx) => (
+    <SwiperSlide key={idx}>
+      <Image
+        src={img}
+        alt={`Tatam Sandal slide ${idx + 1}`}
+        className="w-full h-auto object-contain"
+      />
+    </SwiperSlide>
+  ))}
+
+  {/* Custom arrows for mobile */}
+  {isMobile && (
+    <>
+      <button
+        ref={prevRef}
+        className="absolute left-2 top-1/2 -translate-y-1/2 z-10"
+      >
+        <Image src={LeftArrow} alt="Previous" width={30} height={30} />
+      </button>
+      <button
+        ref={nextRef}
+        className="absolute right-2 top-1/2 -translate-y-1/2 z-10"
+      >
+        <Image src={RightArrow} alt="Next" width={30} height={30} />
+      </button>
+    </>
+  )}
+</Swiper>
+
           ) : (
             <>
               <div className="flex flex-col mr-4 space-y-3 w-20">
@@ -99,7 +139,7 @@ const ProductPage: React.FC = () => {
                 setShowModal(true);
               }
             }}
-            className="bg-black hover:bg-gray-800 text-white w-full mb-8 cursor-pointer h-10 rounded"
+            className="bg-black hover:bg-gray-800 text-white w-full mb-[88px] cursor-pointer h-10 rounded"
           >
             ORDER BY PHONE
           </button>
@@ -200,7 +240,8 @@ const ProductPage: React.FC = () => {
           })}
         </div>
       </main>
-    </div>
+      </div>
+      </PatternLayout>
   );
 };
 
