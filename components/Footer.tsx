@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaInstagram, FaTiktok, FaXTwitter } from "react-icons/fa6";
 import logo from "../assets/Logo Mobile.png"
-import pattern from "../assets/Pattern_Mobile_and_Desktop-removebg-preview.png";
 
 const Footer = () => {
   return (
