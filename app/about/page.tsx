@@ -25,8 +25,8 @@ const AboutSection = () => {
         </div>
 
         {/* Description */}
-        <div className="max-w-3xl mx-auto md:mx-0 mt-8 md:mt-2 md:-mb-2 h-full w-[35%]">
-          <p className="text-sm md:text-base leading-relaxed font-light md:font-normal text-left" style={{ fontFamily: "BLmelody-light" }}>
+        <div className="max-w-3xl mx-auto md:mx-0 mt-8 md:mt-2 md:-mb-2 h-full sm:w-[35%]">
+          <p className="text-sm md:text-base leading-relaxed font-light md:font-normal text-left " style={{ fontFamily: "BLmelody-light" }}>
             Founded in 2015 by Tracy Chinedu, Little Things for Her (LTFH)
             crafts fashion accessories that celebrate beauty and individuality.
             Guided by a timeless yet creative spirit, LTFH pieces are designed
