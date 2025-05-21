@@ -13,20 +13,25 @@ const AboutSection = () => {
         {/* Title and Subtitle */}
         <div className="w-full flex flex-col md:flex-row md:items-start md:justify-center md:gap-0 text-center md:text-left mb-6 md:mb-4">
           <h2
-            className="text-[3rem] md:text-[7rem] md:mr-8"
+              className="text-[3rem] md:text-[7rem] md:mr-8"
+              style={{
+                fontFamily: "Belgan Aesthetic",}}
           >
             ABOUT
           </h2>
           <h3
-            className="text-xl md:text-2xl font-light md:mt-8 md:ml-0 md:pl-4 md:whitespace-pre-line"
+              className="text-xl md:text-2xl font-light md:mt-8 md:ml-0 md:pl-4 md:whitespace-pre-line leading-6 sm:w-40 w-52 m-auto sm:m-0"
+            style={{ fontFamily: "Belgan Aesthetic" }
+            }
           >
-            Crafting{"\n"}Elegance with{"\n"}Love and{"\n"}Artistry.
+            Crafting Elegance with Love and Artistry.
+            {/* Crafting{"\n"}Elegance with{"\n"}Love and{"\n"}Artistry. */}
           </h3>
         </div>
 
         {/* Description */}
-        <div className="max-w-3xl mx-auto md:mx-0 mt-8 md:mt-2 md:-mb-2 h-full sm:w-[35%]">
-          <p className="text-sm md:text-base leading-relaxed font-light md:font-normal text-left " style={{ fontFamily: "BLmelody-light" }}>
+        <div className="max-w-3xl sm:ml-40 mt-8 md:mt-2 md:-mb-2 h-full sm:w-[35%] ">
+          <p className="text-sm md:text-base leading-5 font-light sm:p-0 p-10" >
             Founded in 2015 by Tracy Chinedu, Little Things for Her (LTFH)
             crafts fashion accessories that celebrate beauty and individuality.
             Guided by a timeless yet creative spirit, LTFH pieces are designed

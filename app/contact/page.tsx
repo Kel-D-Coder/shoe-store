@@ -8,11 +8,11 @@ const Page = () => {
   
             {/* Hero */}
             <section className="text-center py-24">
-            <h1 className="text-[52px] md:text-[72px] leading-none font-[500] tracking-wide font-serif">CONTACT US</h1>
+            <h1 className="text-[52px] md:text-[72px] leading-none font-[500] tracking-wide font-serif" style={{fontFamily: "Belgan Aesthetic"}}>CONTACT US</h1>
             </section>
     
             {/* Contact Info */}
-            <section className="max-w-3xl mx-auto px-6 pb-24" style={{fontFamily: "BLmelody"}}>
+            <section className="max-w-3xl mx-auto px-6 pb-24 font-light" >
             <h2 className="uppercase text-sm font-bold tracking-widest mb-2">Get in Touch</h2>
             <p className="text-gray-700 mb-6">
                 For inquiries, assistance, or to request a catalogue, <br /> reach out—we’re here for you.
@@ -26,7 +26,10 @@ const Page = () => {
                 <div>
                 <p>Opening/Closing hours</p>
                 <p>Monday to Friday: 9am – 5pm (GMT+1)</p>
-                <p>Saturday: 10am – 9pm (GMT+1)...</p>
+                <p className="mb-3">Saturday: 10am – 9pm (GMT+1)</p>
+                <p className="mb-3">Have a question? You can also contact us:</p>
+
+                <p>Services@littlethingsforher.com</p>
                 </div>
                 <div>
                 </div>

@@ -48,7 +48,7 @@ const Header = () => {
 
   return (
     <div className="bg-white">
-      <header className="flex justify-between items-center py-4 px-6 bg-white text-black relative z-50" style={{ fontFamily: "BLmelody-light" }}>
+      <header className="flex justify-between items-center py-4 px-6 bg-white text-black relative z-50" >
         {/* Mobile Menu Icon & Logo (left) */}
         <div className="md:hidden flex items-center gap-3">
           <button onClick={toggleMobileMenu} className="text-gray-700 hover:text-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -70,7 +70,7 @@ const Header = () => {
         </div>
 
         {/* Navigation Links (Hidden on Mobile) */}
-        <div className="hidden md:flex space-x-6">
+        <div className="hidden ml-[5rem] md:flex space-x-6" style={{ fontFamily: "BLmelody" }}>
           <Link
             href="/about"
             className="text-xs font-medium text-gray-700 hover:text-black"
@@ -91,7 +91,6 @@ const Header = () => {
             <Image
               src={logo}
               alt="LTFH Logo"
-             
               className="w-32 h-auto object-contain"
             />
           </Link>
@@ -99,7 +98,7 @@ const Header = () => {
 
         <button
           onClick={() => setIsPanelOpen(true)}
-          className="text-xs font-medium text-gray-700 hover:text-black md:block"
+          className="text-xs font-light text-gray-700 hover:text-black md:block"
         >
           CONTACT US
         </button>
@@ -275,7 +274,7 @@ const Header = () => {
 
                 <button
                   type="submit"
-                  className="w-full bg-gray-700 text-white py-3 mt-4 text-sm font-semibold"
+                  className="w-full bg-black text-white py-3 mt-4 text-sm font-semibold"
                   disabled={isSending}
                 >
                   {isSending ? "Sending..." : "REQUEST CATALOGUE"}

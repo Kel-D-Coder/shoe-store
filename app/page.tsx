@@ -15,12 +15,10 @@ const Index = () => {
   const router = useRouter();
   return (
     <PatternLayout>
-    <div className="relative flex flex-col h-[150vh] bg-white ">
-      {/* <Image src={pattern} alt="" className="place-self-end absolute" /> */}
+    <div className="relative flex flex-col h-[150vh] bg-white " id='top'>
       {/* Background Image */}
       <div
-        className="absolute inset-0 z-20 bg-no-repeat bg-center bg-cover opacity-20 h-full hero"
-        // style={{ backgroundImage: `url(${BgPic.src})` }}
+        className="absolute inset-0 z-[-20px] bg-no-repeat bg-center bg-cover opacity-20 h-full hero"
         >
         <Image src={BgPic} alt="Background" fill className="object-cover" />
       </div>
@@ -34,30 +32,32 @@ const Index = () => {
           </div>
 
           {/* Text Info */}
-          <div className="text-center text-black px-2">
+          <div className="text-center text-black px-2 leading-relaxed" style={{ fontFamily: "Belgan Aesthetic" }}>
             <div className='flex gap-3 justify-center'>
-              <Image src={textLogo} alt='text logo' className="text-sm sm:text-base font-medium mb-1 w-28" />
+              <Image src={textLogo} alt='text logo' className="text-sm sm:text-base font-medium mb-1 w-36" />
               <Image src={logo} alt='logo' className="sm:text-sm font-medium mb-2 w-20" />
             </div>
-            <p className="text-xs sm:text-sm mb-1">Lagos-made elevated everyday pieces and subtle</p>
-            <p className="text-xs sm:text-sm mb-1">HFQFW fashioned suitable: scorching af littlethingsforher.com</p>
-            <p className="text-xs sm:text-sm mb-4">FMFFCH • Lagos</p>
+              <p className="text-xs sm:text-sm sm:w-[21rem] w-[18rem] leading-[15px]">Fine details unusual anatomy
+                proud and subtle, highly functional
+                available worldwide at littlethingsforher.com
+                LTFH Co. © Lagos.
+              </p>
+            
             <div className="flex justify-center">
-              <div className="h-5 w-5 border border-gray-300 rounded-full flex items-center justify-center">
+              <div className="h-5 w-8 border border-gray-300 rounded-full flex items-center justify-center mt-2">
                 <Image src={emblem} alt='emblem logo' />
               </div>
             </div>
           </div>
 
           {/* Bottom Image */}
-          <div className="relative w-full max-w-xs h-64 sm:h-80">
+          <div className="relative w-full max-w-xs h-64 sm:h-80 mt-[-60px]">
             <Image src={pic2} alt="Bottom product" fill className="object-contain" />
           </div>
 
           <div className="text-center mt-4">
             <button className='hover:cursor-pointer' onClick={() => router.push('/shop')}>
-            <p className="text-sm sm:text-base font-medium border p-2 hover:underline text-black" style={{fontFamily: "BLmelody"}}>unveil elegance</p>
-
+              <p className="text-sm sm:text-base font-medium border p-2 hover:underline text-black" style={{fontFamily: "BLmelody"}}>Unveil Elegance</p>
             </button>
           </div>
         </div>

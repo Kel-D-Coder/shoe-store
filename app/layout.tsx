@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        style={{ fontFamily: 'Belgan Aesthetic' }}
+        style={{ fontFamily: 'BLmelody-light' }}
         className="flex flex-col"
       >
         <Header />
