@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { FaChevronDown, FaChevronUp, FaPhone } from "react-icons/fa6";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
+import phoneIcon from "../../assets/Call 1.png";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -197,7 +198,7 @@ const ProductPage: React.FC = () => {
                     </p>
                     <p className="text-sm text-gray-500 mb-8 text-center">(Closed on public holiday).</p>
                     <div className="flex items-center justify-center gap-3 text-gray-400 text-lg font-medium mb-24 mt-2">
-                      <FaPhone className="h-6 w-6" />
+                      <Image src={phoneIcon} alt="" />
                       <span className="tracking-wide">CALL US: +234 201 330 6336</span>
                     </div>
                     <ul className="text-black text-base list-disc pl-6 space-y-2 w-full max-w-xs mx-auto text-left">
