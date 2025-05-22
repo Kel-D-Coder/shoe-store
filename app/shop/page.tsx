@@ -216,7 +216,7 @@ const ProductPage: React.FC = () => {
                   className="flex justify-between items-center cursor-pointer p-3"
                   onClick={() => toggleSection(key)}
                 >
-                  <h3 className="font-medium">{sections[key].title}</h3>
+                  <h3 className="font-bold">{sections[key].title}</h3>
                   <button className="rounded-full p-1" aria-label={`Toggle ${sections[key].title}`}>
                     {openSections[key] ? <FaChevronUp className="h-4 w-4" /> : <FaChevronDown className="h-4 w-4" />}
                   </button>

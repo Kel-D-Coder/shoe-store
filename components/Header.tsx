@@ -7,6 +7,7 @@ import "animate.css";
 import Image from "next/image";
 import logo from "../assets/Logotype on Banner.png";
 import { Bars2Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { useRouter } from "next/navigation";
 
 const Header = () => {
   const [isPanelOpen, setIsPanelOpen] = useState(false);
@@ -14,6 +15,7 @@ const Header = () => {
   const [message, setMessage] = useState("");
   const formRef = useRef<HTMLFormElement>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const router = useRouter();
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -38,6 +40,8 @@ const Header = () => {
           setMessage("Request sent successfully!");
           setIsSending(false);
           formRef.current?.reset();
+          router.replace("/success");
+
         },
         () => {
           setMessage("Failed to send request. Please try again.");

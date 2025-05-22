@@ -25,20 +25,20 @@ const Footer = () => {
               </div>
 
               {/* Nav Links */}
-              <nav className="flex flex-col space-y-2 uppercase text-[20px] leading-[24px]">
-                <Link href="/about" className="hover:text-gray-300 hover:underline">
+              <nav className="flex flex-col space-y-2 uppercase text-[20px] leading-[24px] text-8xl">
+                <Link href="/about" className="hover:text-gray-300 hover:underline text-[15px]">
                   About
                 </Link>
-                <Link href="/shop" className="hover:text-gray-300 hover:underline">
+                <Link href="/shop" className="hover:text-gray-300 hover:underline text-[15px]">
                   Shop
                 </Link>
-                <Link href="/contact" className="hover:text-gray-300 hover:underline">
+                <Link href="/contact" className="hover:text-gray-300 hover:underline text-[15px]">
                   Contact Us
                 </Link>
               </nav>
 
               {/* Tagline */}
-              <p className="pt-4 text-base font-light" style={{ fontFamily: "Belgan Aesthetic" }}>
+              <p className="pt-4 text-[23px] font-light sm:block hidden" style={{ fontFamily: "Belgan Aesthetic" }}>
                 Everything to complement her look.
               </p>
             </div>
@@ -47,7 +47,7 @@ const Footer = () => {
             <div className="space-y-6">
               {/* Contact */}
               <div className="space-y-1">
-                <h3 className="uppercase text-xs tracking-widest">Connect</h3>
+                <h3 className="uppercase text-xs tracking-widest font-bold">Connect</h3>
                 <p className="text-sm">Service@littlethingsforher.com</p>
                 <a
                   href="tel:+2342013306336"
@@ -59,7 +59,7 @@ const Footer = () => {
 
               {/* Socials */}
               <div className="space-y-2">
-                <h4 className="uppercase text-xs tracking-widest">Follow Us</h4>
+                <h4 className="uppercase text-xs tracking-widest font-bold">Follow Us</h4>
                 <div className="flex space-x-4 text-xl">
                   <Link href="https://www.instagram.com/littlethings4her_/?hl=en" aria-label="Instagram">
                     <FaInstagram />
@@ -76,9 +76,13 @@ const Footer = () => {
           </div>
         </div>
 
+        <p className="pt-4 text-base font-light ml-6 sm:hidden" style={{ fontFamily: "Belgan Aesthetic" }}>
+                Everything to complement her look.
+              </p>
+
         {/* Full-width Bottom Footer */}
         <div className="w-full border-t border-white px-6 mt-12 pt-4 text-[10px] text-white flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-0 mb-10">
-          <Link href="/TermsOfUse" className="hover:text-white place-self-end">
+          <Link href="/TermsOfUse" className="hover:text-white place-self-end sm:ml-12 hidden sm:block">
             Terms
           </Link>
           <div className="flex flex-col sm:flex-row sm:gap-0 items-start sm:items-center">
@@ -86,8 +90,13 @@ const Footer = () => {
             <div>All Rights Reserved.</div>
           </div>
           <Link href="#top">
-            <Image src={textLogo} alt="" className="w-40" />
+            <Image src={textLogo} alt="" className="w-40 mr-24" />
           </Link>
+
+          <Link href="/TermsOfUse" className="hover:text-white place-self-end sm:ml-12 sm:hidden">
+            Terms
+          </Link>
+          
         </div>
       </footer>
     </div>

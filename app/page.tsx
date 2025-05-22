@@ -57,7 +57,7 @@ const Index = () => {
 
           <div className="text-center mt-4">
             <button className='hover:cursor-pointer' onClick={() => router.push('/shop')}>
-              <p className="text-sm sm:text-base font-medium border p-2 hover:underline text-black" style={{fontFamily: "BLmelody"}}>Unveil Elegance</p>
+              <p className="text-sm sm:text-base font-medium p-2 hover:underline text-black" style={{fontFamily: "BLmelody"}}>Unveil Elegance</p>
             </button>
           </div>
         </div>
