@@ -112,8 +112,8 @@ const Header = () => {
 
       {/* Double underline under header */}
       <div className="w-full">
-        <div className="h-[1.5px] bg-[#ba4471]"></div>
-        <div className="h-[1.5px] bg-[#ba4471] mt-1"></div>
+        <div className="h-[1px] bg-[#ba4471]"></div>
+        <div className="h-[1px] bg-[#ba4471] mt-1"></div>
       </div>
       {isMobileMenuOpen && (
         <div className="md:hidden top-10 left-0 right-0 bg-white shadow-md z-10">
